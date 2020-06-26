@@ -28,7 +28,7 @@ spec:
         imagePullPolicy: Always
         env:
           - name: DBENCH_MOUNTPOINT
-            value: /data
+            value: /usr/share/elasticsearch
           # - name: DBENCH_QUICK
           #   value: "yes"
           # - name: FIO_SIZE
@@ -39,7 +39,7 @@ spec:
           #   value: "0"
         volumeMounts:
         - name: dbench-pv
-          mountPath: /data
+          mountPath: /usr/share/elasticsearch
       restartPolicy: Never
       volumes:
       - name: dbench-pv
