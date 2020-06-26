@@ -1,22 +1,27 @@
 #!/usr/bin/env sh
 set -e
 
+echo 1
 if [ -z $DBENCH_MOUNTPOINT ]; then
     DBENCH_MOUNTPOINT=/tmp
 fi
 
+echo 2
 if [ -z $FIO_SIZE ]; then
     FIO_SIZE=2G
 fi
 
+echo 3
 if [ -z $FIO_OFFSET_INCREMENT ]; then
     FIO_OFFSET_INCREMENT=500M
 fi
 
+echo 4
 if [ -z $FIO_DIRECT ]; then
     FIO_DIRECT=1
 fi
 
+eco 5
 echo Working dir: $DBENCH_MOUNTPOINT
 echo
 
