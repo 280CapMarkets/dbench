@@ -3,7 +3,7 @@ apiVersion: v1
 metadata:
   name: dbench-pv-claim
 spec:
-  storageClassName: ssd
+  storageClassName: fast-disks
   # storageClassName: gp2
   # storageClassName: local-storage
   # storageClassName: ibmc-block-bronze
@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
       - name: dbench
-        image: logdna/dbench:latest
+        image: lohith20/dbbench:v2
         imagePullPolicy: Always
         env:
           - name: DBENCH_MOUNTPOINT
